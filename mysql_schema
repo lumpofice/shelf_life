@@ -1,0 +1,84 @@
+CREATE SCHEMA shelf_life
+DEFAULT CHARACTER SET utf8mb4;
+
+USE shelf_life;
+ 
+CREATE TABLE `states` (
+	`state_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`state_name`	TEXT
+);
+
+INSERT INTO `states` VALUES (1,'georgia');
+
+CREATE TABLE `grocers` (
+	`grocer_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`grocer_name`	TEXT
+);
+
+INSERT INTO `grocers` VALUES (1,'winn_dixie');
+INSERT INTO `grocers` VALUES (2,'publix');
+
+CREATE TABLE `foods` (
+	`food_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`food_name`	TEXT
+);
+
+INSERT INTO `foods` VALUES (1,'aqua_panna_water_still');
+INSERT INTO `foods` VALUES (2,'ground_beef_27');
+INSERT INTO `foods` VALUES (3,'chicken_leg_quarters');
+INSERT INTO `foods` VALUES (4,'mango');
+INSERT INTO `foods` VALUES (5,'nectarine');
+INSERT INTO `foods` VALUES (6,'butternut_squash');
+INSERT INTO `foods` VALUES (7,'plantain');
+INSERT INTO `foods` VALUES (8,'mountain_valley_water_still');
+INSERT INTO `foods` VALUES (9,'topo_chico_water_carbonated');
+INSERT INTO `foods` VALUES (10,'buttercup_squash');
+
+CREATE TABLE `countries` (
+	`country_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`country_name`	TEXT
+);
+
+INSERT INTO `countries` VALUES (1,'united_states_of_america');
+
+CREATE TABLE `cities` (
+	`city_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`city_name`	TEXT
+);
+
+INSERT INTO `cities` VALUES (1,'columbus');
+
+set foreign_key_checks=0;
+
+CREATE TABLE `purchases` (
+	`purchase_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`food_id`	INTEGER NOT NULL,
+	`amount`	REAL,
+	`grocer_id`	INTEGER NOT NULL,
+	`city_id`	INTEGER NOT NULL,
+	`state_id`	INTEGER NOT NULL,
+	`country_id`	INTEGER NOT NULL,
+	`the_date`	TEXT,
+	FOREIGN KEY(`grocer_id`) REFERENCES `grocers`(`grocer_id`),
+	FOREIGN KEY(`city_id`) REFERENCES `cities`(`city_id`),
+	FOREIGN KEY(`state_id`) REFERENCES `states`(`state_id`),
+	FOREIGN KEY(`country_id`) REFERENCES `countries`(`country_id`),
+	FOREIGN KEY(`food_id`) REFERENCES `foods`(`food_id`)
+);
+
+INSERT INTO `purchases` VALUES (1,1,3.58,1,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (2,2,4.65,1,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (3,2,5.06,1,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (4,2,4.86,1,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (5,3,10.32,1,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (6,3,0.0,1,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (7,4,2.5,1,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (8,5,0.99,1,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (9,6,12.38,1,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (10,7,2.55,1,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (11,1,2.29,2,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (12,8,12.95,2,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (13,9,12.99,2,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (14,10,10.73,2,1,1,1,'2022-07-10');
+
+set foreign_key_checks=1;
