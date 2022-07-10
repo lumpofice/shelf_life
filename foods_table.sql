@@ -1,0 +1,16 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS `foods` (
+	`food_id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`food_name`	TEXT
+);
+INSERT INTO `foods` VALUES (1,'aqua_panna_water_still');
+INSERT INTO `foods` VALUES (2,'ground_beef_27');
+INSERT INTO `foods` VALUES (3,'chicken_leg_quarters');
+INSERT INTO `foods` VALUES (4,'mango');
+INSERT INTO `foods` VALUES (5,'nectarine');
+INSERT INTO `foods` VALUES (6,'butternut_squash');
+INSERT INTO `foods` VALUES (7,'plantain');
+INSERT INTO `foods` VALUES (8,'mountain_valley_water_still');
+INSERT INTO `foods` VALUES (9,'topo_chico_water_carbonated');
+INSERT INTO `foods` VALUES (10,'buttercup_squash');
+COMMIT;
