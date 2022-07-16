@@ -22,7 +22,6 @@ CREATE TABLE `foods` (
 	`food_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	`food_name`	TEXT
 );
-
 INSERT INTO `foods` VALUES (1,'aqua_panna_water_still');
 INSERT INTO `foods` VALUES (2,'ground_beef_27');
 INSERT INTO `foods` VALUES (3,'chicken_leg_quarters');
@@ -33,6 +32,14 @@ INSERT INTO `foods` VALUES (7,'plantain');
 INSERT INTO `foods` VALUES (8,'mountain_valley_water_still');
 INSERT INTO `foods` VALUES (9,'topo_chico_water_carbonated');
 INSERT INTO `foods` VALUES (10,'buttercup_squash');
+INSERT INTO `foods` VALUES (11,'apricot');
+INSERT INTO `foods` VALUES (12,'banana');
+INSERT INTO `foods` VALUES (13,'maradol_papaya');
+INSERT INTO `foods` VALUES (14,'ground_beef_7');
+INSERT INTO `foods` VALUES (15,'beef_liver');
+INSERT INTO `foods` VALUES (16,'beef_kidney');
+INSERT INTO `foods` VALUES (17,'hass_avocado');
+INSERT INTO `foods` VALUES (18,'acorn_squash');
 
 CREATE TABLE `countries` (
 	`country_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -59,11 +66,11 @@ CREATE TABLE `purchases` (
 	`state_id`	INTEGER NOT NULL,
 	`country_id`	INTEGER NOT NULL,
 	`the_date`	TEXT,
-	FOREIGN KEY(`grocer_id`) REFERENCES `grocers`(`grocer_id`),
-	FOREIGN KEY(`city_id`) REFERENCES `cities`(`city_id`),
 	FOREIGN KEY(`state_id`) REFERENCES `states`(`state_id`),
-	FOREIGN KEY(`country_id`) REFERENCES `countries`(`country_id`),
-	FOREIGN KEY(`food_id`) REFERENCES `foods`(`food_id`)
+	FOREIGN KEY(`city_id`) REFERENCES `cities`(`city_id`),
+	FOREIGN KEY(`grocer_id`) REFERENCES `grocers`(`grocer_id`),
+	FOREIGN KEY(`food_id`) REFERENCES `foods`(`food_id`),
+	FOREIGN KEY(`country_id`) REFERENCES `countries`(`country_id`)
 );
 
 INSERT INTO `purchases` VALUES (1,1,3.58,1,1,1,1,'2022-07-10');
@@ -80,5 +87,23 @@ INSERT INTO `purchases` VALUES (11,1,2.29,2,1,1,1,'2022-07-10');
 INSERT INTO `purchases` VALUES (12,8,12.95,2,1,1,1,'2022-07-10');
 INSERT INTO `purchases` VALUES (13,9,12.99,2,1,1,1,'2022-07-10');
 INSERT INTO `purchases` VALUES (14,10,10.73,2,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (15,12,2.29,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (16,11,0.36,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (17,13,5.77,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (18,18,6.37,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (19,7,3.06,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (20,1,1.79,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (21,14,5.6,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (22,14,4.53,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (23,14,4.58,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (24,14,4.64,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (25,3,8.88,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (26,3,7.96,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (27,8,15.54,2,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (28,9,12.99,2,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (29,15,5.99,2,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (30,15,5.99,2,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (31,16,2.83,2,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (32,17,5.96,2,1,1,1,'2022-07-16');
 
 set foreign_key_checks=1;

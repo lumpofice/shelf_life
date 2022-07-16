@@ -8,10 +8,10 @@ CREATE TABLE IF NOT EXISTS `purchases` (
 	`state_id`	INTEGER NOT NULL,
 	`country_id`	INTEGER NOT NULL,
 	`the_date`	TEXT,
-	FOREIGN KEY(`city_id`) REFERENCES `cities`(`city_id`),
 	FOREIGN KEY(`state_id`) REFERENCES `states`(`state_id`),
-	FOREIGN KEY(`food_id`) REFERENCES `foods`(`food_id`),
+	FOREIGN KEY(`city_id`) REFERENCES `cities`(`city_id`),
 	FOREIGN KEY(`grocer_id`) REFERENCES `grocers`(`grocer_id`),
+	FOREIGN KEY(`food_id`) REFERENCES `foods`(`food_id`),
 	FOREIGN KEY(`country_id`) REFERENCES `countries`(`country_id`)
 );
 INSERT INTO `purchases` VALUES (1,1,3.58,1,1,1,1,'2022-07-10');
@@ -28,4 +28,22 @@ INSERT INTO `purchases` VALUES (11,1,2.29,2,1,1,1,'2022-07-10');
 INSERT INTO `purchases` VALUES (12,8,12.95,2,1,1,1,'2022-07-10');
 INSERT INTO `purchases` VALUES (13,9,12.99,2,1,1,1,'2022-07-10');
 INSERT INTO `purchases` VALUES (14,10,10.73,2,1,1,1,'2022-07-10');
+INSERT INTO `purchases` VALUES (15,12,2.29,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (16,11,0.36,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (17,13,5.77,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (18,18,6.37,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (19,7,3.06,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (20,1,1.79,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (21,14,5.6,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (22,14,4.53,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (23,14,4.58,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (24,14,4.64,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (25,3,8.88,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (26,3,7.96,1,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (27,8,15.54,2,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (28,9,12.99,2,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (29,15,5.99,2,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (30,15,5.99,2,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (31,16,2.83,2,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (32,17,5.96,2,1,1,1,'2022-07-16');
 COMMIT;
