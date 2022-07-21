@@ -1,30 +1,52 @@
 CREATE SCHEMA shelf_life
 DEFAULT CHARACTER SET utf8mb4;
 
+
+
+
 USE shelf_life;
+
+
+
  
 CREATE TABLE `states` (
 	`state_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	`state_name`	TEXT
 );
 
+
+
+
 INSERT INTO `states` VALUES (1,'georgia');
+
+
+
 
 CREATE TABLE `grocers` (
 	`grocer_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	`grocer_name`	TEXT
 );
 
+
+
+
 INSERT INTO `grocers` VALUES (1,'winn_dixie');
 INSERT INTO `grocers` VALUES (2,'publix');
 
+
+
+
 CREATE TABLE `foods` (
 	`food_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	`food_name`	TEXT
+	`food_name`	VARCHAR(100) UNIQUE
 );
+
+
+
+
 INSERT INTO `foods` VALUES (1,'aqua_panna_water_still');
 INSERT INTO `foods` VALUES (2,'ground_beef_27');
-INSERT INTO `foods` VALUES (3,'chicken_leg_quarters');
+INSERT INTO `foods` VALUES (3,'chicken_leg_quarter');
 INSERT INTO `foods` VALUES (4,'mango');
 INSERT INTO `foods` VALUES (5,'nectarine');
 INSERT INTO `foods` VALUES (6,'butternut_squash');
@@ -40,22 +62,46 @@ INSERT INTO `foods` VALUES (15,'beef_liver');
 INSERT INTO `foods` VALUES (16,'beef_kidney');
 INSERT INTO `foods` VALUES (17,'hass_avocado');
 INSERT INTO `foods` VALUES (18,'acorn_squash');
+INSERT INTO `foods` VALUES (19,'ground_beef_10');
+INSERT INTO `foods` VALUES (20,'ground_beef_15');
+INSERT INTO `foods` VALUES (21,'blueberry');
+CREATE INDEX `index_food_name` ON `foods` (
+	`food_name`
+);
+
+
+
 
 CREATE TABLE `countries` (
 	`country_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	`country_name`	TEXT
 );
 
+
+
+
 INSERT INTO `countries` VALUES (1,'united_states_of_america');
+
+
+
 
 CREATE TABLE `cities` (
 	`city_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	`city_name`	TEXT
 );
 
+
+
+
 INSERT INTO `cities` VALUES (1,'columbus');
 
+
+
+
 set foreign_key_checks=0;
+
+
+
 
 CREATE TABLE `purchases` (
 	`purchase_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -66,12 +112,15 @@ CREATE TABLE `purchases` (
 	`state_id`	INTEGER NOT NULL,
 	`country_id`	INTEGER NOT NULL,
 	`the_date`	TEXT,
-	FOREIGN KEY(`state_id`) REFERENCES `states`(`state_id`),
 	FOREIGN KEY(`city_id`) REFERENCES `cities`(`city_id`),
-	FOREIGN KEY(`grocer_id`) REFERENCES `grocers`(`grocer_id`),
 	FOREIGN KEY(`food_id`) REFERENCES `foods`(`food_id`),
-	FOREIGN KEY(`country_id`) REFERENCES `countries`(`country_id`)
+	FOREIGN KEY(`grocer_id`) REFERENCES `grocers`(`grocer_id`),
+	FOREIGN KEY(`country_id`) REFERENCES `countries`(`country_id`),
+	FOREIGN KEY(`state_id`) REFERENCES `states`(`state_id`)
 );
+
+
+
 
 INSERT INTO `purchases` VALUES (1,1,3.58,1,1,1,1,'2022-07-10');
 INSERT INTO `purchases` VALUES (2,2,4.65,1,1,1,1,'2022-07-10');
@@ -105,5 +154,21 @@ INSERT INTO `purchases` VALUES (29,15,5.99,2,1,1,1,'2022-07-16');
 INSERT INTO `purchases` VALUES (30,15,5.99,2,1,1,1,'2022-07-16');
 INSERT INTO `purchases` VALUES (31,16,2.83,2,1,1,1,'2022-07-16');
 INSERT INTO `purchases` VALUES (32,17,5.96,2,1,1,1,'2022-07-16');
+INSERT INTO `purchases` VALUES (33,3,9.75,1,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (34,3,9.13,1,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (35,20,6.29,1,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (36,20,5.45,1,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (37,19,7.07,1,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (38,19,5.32,1,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (39,21,3.34,1,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (40,5,4.51,1,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (41,12,2.02,1,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (42,7,2.55,1,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (43,8,15.54,2,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (44,4,4.0,2,1,1,1,'2022-07-21');
+INSERT INTO `purchases` VALUES (45,15,5.99,2,1,1,1,'2022-07-21');
+
+
+
 
 set foreign_key_checks=1;

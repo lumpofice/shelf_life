@@ -1,11 +1,11 @@
 BEGIN TRANSACTION;
 CREATE TABLE IF NOT EXISTS `foods` (
 	`food_id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-	`food_name`	TEXT
+	`food_name`	TEXT UNIQUE
 );
 INSERT INTO `foods` VALUES (1,'aqua_panna_water_still');
 INSERT INTO `foods` VALUES (2,'ground_beef_27');
-INSERT INTO `foods` VALUES (3,'chicken_leg_quarters');
+INSERT INTO `foods` VALUES (3,'chicken_leg_quarter');
 INSERT INTO `foods` VALUES (4,'mango');
 INSERT INTO `foods` VALUES (5,'nectarine');
 INSERT INTO `foods` VALUES (6,'butternut_squash');
@@ -21,4 +21,10 @@ INSERT INTO `foods` VALUES (15,'beef_liver');
 INSERT INTO `foods` VALUES (16,'beef_kidney');
 INSERT INTO `foods` VALUES (17,'hass_avocado');
 INSERT INTO `foods` VALUES (18,'acorn_squash');
+INSERT INTO `foods` VALUES (19,'ground_beef_10');
+INSERT INTO `foods` VALUES (20,'ground_beef_15');
+INSERT INTO `foods` VALUES (21,'blueberry');
+CREATE INDEX IF NOT EXISTS `index_food_name` ON `foods` (
+	`food_name`
+);
 COMMIT;
