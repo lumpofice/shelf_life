@@ -8,10 +8,10 @@ CREATE TABLE IF NOT EXISTS `purchases` (
 	`state_id`	INTEGER NOT NULL,
 	`country_id`	INTEGER NOT NULL,
 	`the_date`	TEXT,
-	FOREIGN KEY(`state_id`) REFERENCES `states`(`state_id`),
 	FOREIGN KEY(`city_id`) REFERENCES `cities`(`city_id`),
-	FOREIGN KEY(`country_id`) REFERENCES `countries`(`country_id`),
 	FOREIGN KEY(`grocer_id`) REFERENCES `grocers`(`grocer_id`),
+	FOREIGN KEY(`country_id`) REFERENCES `countries`(`country_id`),
+	FOREIGN KEY(`state_id`) REFERENCES `states`(`state_id`),
 	FOREIGN KEY(`food_id`) REFERENCES `foods`(`food_id`)
 );
 INSERT INTO `purchases` VALUES (1,1,3.58,1,1,1,1,'2022-07-10');
@@ -62,4 +62,15 @@ INSERT INTO `purchases` VALUES (45,15,5.99,2,1,1,1,'2022-07-21');
 INSERT INTO `purchases` VALUES (46,8,15.54,2,1,1,1,'2022-07-24');
 INSERT INTO `purchases` VALUES (47,16,1.84,2,1,1,1,'2022-07-24');
 INSERT INTO `purchases` VALUES (48,16,1.64,2,1,1,1,'2022-07-24');
+INSERT INTO `purchases` VALUES (49,22,6.0,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (50,1,6.87,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (51,9,12.99,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (52,18,4.11,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (53,10,6.47,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (54,23,16.99,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (55,20,8.08,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (56,20,7.98,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (57,3,8.68,1,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (58,3,9.23,1,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (59,7,3.06,1,1,1,1,'2022-07-27');
 COMMIT;

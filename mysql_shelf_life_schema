@@ -65,6 +65,8 @@ INSERT INTO `foods` VALUES (18,'acorn_squash');
 INSERT INTO `foods` VALUES (19,'ground_beef_10');
 INSERT INTO `foods` VALUES (20,'ground_beef_15');
 INSERT INTO `foods` VALUES (21,'blueberry');
+INSERT INTO `foods` VALUES (22,'saratoga_water_still');
+INSERT INTO `foods` VALUES (23,'salmon_sockeye_fillet');
 CREATE INDEX `index_food_name` ON `foods` (
 	`food_name`
 );
@@ -170,6 +172,17 @@ INSERT INTO `purchases` VALUES (45,15,5.99,2,1,1,1,'2022-07-21');
 INSERT INTO `purchases` VALUES (46,8,15.54,2,1,1,1,'2022-07-24');
 INSERT INTO `purchases` VALUES (47,16,1.84,2,1,1,1,'2022-07-24');
 INSERT INTO `purchases` VALUES (48,16,1.64,2,1,1,1,'2022-07-24');
+INSERT INTO `purchases` VALUES (49,22,6.0,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (50,1,6.87,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (51,9,12.99,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (52,18,4.11,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (53,10,6.47,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (54,23,16.99,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (55,20,8.08,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (56,20,7.98,2,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (57,3,8.68,1,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (58,3,9.23,1,1,1,1,'2022-07-27');
+INSERT INTO `purchases` VALUES (59,7,3.06,1,1,1,1,'2022-07-27');
 
 
 
