@@ -27,6 +27,7 @@ INSERT INTO `foods` VALUES (21,'blueberry');
 INSERT INTO `foods` VALUES (22,'saratoga_water_still');
 INSERT INTO `foods` VALUES (23,'salmon_sockeye_fillet');
 INSERT INTO `foods` VALUES (24, 'peach');
+INSERT INTO `foods` VALUES (25, 'ground_beef_20');
 CREATE INDEX IF NOT EXISTS `index_food_name` ON `foods` (
 	`food_name`
 );
