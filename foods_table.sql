@@ -30,6 +30,7 @@ INSERT INTO `foods` VALUES (24, 'peach');
 INSERT INTO `foods` VALUES (25, 'ground_beef_20');
 INSERT INTO `foods` VALUES (26, 'proud_source_water_sparkling');
 INSERT INTO `foods` VALUES (27, 'beef_heart');
+INSERT INTO `foods` VALUES (28, 'honeycomb');
 CREATE INDEX IF NOT EXISTS `index_food_name` ON `foods` (
 	`food_name`
 );
