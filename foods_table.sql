@@ -38,6 +38,10 @@ INSERT INTO `foods` VALUES (32,'beef_ribeye');
 INSERT INTO `foods` VALUES (33,'whole_chicken');
 INSERT INTO `foods` VALUES (34,'beef_t_bone');
 INSERT INTO `foods` VALUES (35,'raw_honey');
+INSERT INTO `foods` VALUES (36,'chicken_thigh');
+INSERT INTO `foods` VALUES (37,'solo_papaya');
+INSERT INTO `foods` VALUES (38,'real_salt');
+INSERT INTO `foods` VALUES (39,'duck_egg');
 CREATE INDEX IF NOT EXISTS `index_food_name` ON `foods` (
 	`food_name`
 );
