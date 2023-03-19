@@ -43,6 +43,7 @@ INSERT INTO `foods` VALUES (37,'solo_papaya');
 INSERT INTO `foods` VALUES (38,'real_salt');
 INSERT INTO `foods` VALUES (39,'duck_egg');
 INSERT INTO `foods` VALUES (40,'red_kuri_squash');
+INSERT INTO `foods` VALUES (41, 'dannon_yogurt');
 CREATE INDEX IF NOT EXISTS `index_food_name` ON `foods` (
 	`food_name`
 );
