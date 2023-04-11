@@ -88,6 +88,7 @@ INSERT INTO `foods` VALUES (39,'duck_egg');
 INSERT INTO `foods` VALUES (40,'red_kuri_squash');
 INSERT INTO `foods` VALUES (41, 'dannon_yogurt');
 INSERT INTO `foods` VALUES (42, 'chocolate_100_cacao');
+INSERT INTO `foods` VALUES (43, 'yuca');
 CREATE INDEX `index_food_name` ON `foods` (
 	`food_name`
 );
@@ -616,6 +617,8 @@ INSERT INTO `purchases` VALUES (468,2,5.72,1,1,1,1,'2023-03-01');
 INSERT INTO `purchases` VALUES (469,3,8.96,1,1,1,1,'2023-03-01');
 INSERT INTO `purchases` VALUES (470,3,7.66,1,1,1,1,'2023-03-01');
 INSERT INTO `purchases` VALUES (471,3,9.77,1,1,1,1,'2023-03-01');
+INSERT INTO `purchases` VALUES (472,7,5.00,2,1,1,1,'2023-03-03');
+INSERT INTO `purchases` VALUES (473,43,7.40,2,1,1,1,'2023-03-03');
 
 
 
