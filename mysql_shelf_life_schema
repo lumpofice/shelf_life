@@ -1,6 +1,7 @@
-CREATE SCHEMA shelf_life
-DEFAULT CHARACTER SET utf8mb4;
-
+create database shelf_life character set utf8 collate utf8_bin;
+create user 'shelf_life'@'localhost' identified by '<db_password>';
+grant all privileges on shelf_life.* to 'shelf_life'@'localhost';
+flush privileges;
 
 
 
@@ -708,6 +709,13 @@ INSERT INTO `purchases` VALUES (558,19,2.54,1,1,1,1,'2023-04-15');
 INSERT INTO `purchases` VALUES (559,3,6.00,1,1,1,1,'2023-04-15');
 INSERT INTO `purchases` VALUES (560,3,6.62,1,1,1,1,'2023-04-15');
 INSERT INTO `purchases` VALUES (561,3,6.15,1,1,1,1,'2023-04-15');
+INSERT INTO `purchases` VALUES (562,22,2.99,2,1,1,1,'2023-04-21');
+INSERT INTO `purchases` VALUES (563,22,2.99,2,1,1,1,'2023-04-21');
+INSERT INTO `purchases` VALUES (564,12,1.90,2,1,1,1,'2023-04-21');
+INSERT INTO `purchases` VALUES (565,44,3.99,2,1,1,1,'2023-04-21');
+INSERT INTO `purchases` VALUES (566,17,3.45,2,1,1,1,'2023-04-22');
+INSERT INTO `purchases` VALUES (567,44,3.99,2,1,1,1,'2023-04-22');
+INSERT INTO `purchases` VALUES (568,7,3.00,2,1,1,1,'2023-04-22');
 
 
 
