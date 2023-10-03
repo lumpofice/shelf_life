@@ -50,6 +50,7 @@ INSERT INTO `foods` VALUES (44, 'cantaloupe');
 INSERT INTO `foods` VALUES (45, 'apple');
 INSERT INTO `foods` VALUES (46, 'vinegar');
 INSERT INTO `foods` VALUES (47, 'pear');
+INSERT INTO `foods` VALUES (48, 'coconut_cream');
 CREATE INDEX IF NOT EXISTS `index_food_name` ON `foods` (
 	`food_name`
 );
