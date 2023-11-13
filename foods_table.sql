@@ -43,14 +43,14 @@ INSERT INTO `foods` VALUES (37,'solo_papaya');
 INSERT INTO `foods` VALUES (38,'real_salt');
 INSERT INTO `foods` VALUES (39,'duck_egg');
 INSERT INTO `foods` VALUES (40,'red_kuri_squash');
-INSERT INTO `foods` VALUES (41, 'dannon_yogurt');
-INSERT INTO `foods` VALUES (42, 'chocolate_100_cacao');
-INSERT INTO `foods` VALUES (43, 'yuca');
-INSERT INTO `foods` VALUES (44, 'cantaloupe');
-INSERT INTO `foods` VALUES (45, 'apple');
-INSERT INTO `foods` VALUES (46, 'vinegar');
-INSERT INTO `foods` VALUES (47, 'pear');
-INSERT INTO `foods` VALUES (48, 'coconut_cream');
+INSERT INTO `foods` VALUES (41,'dannon_yogurt');
+INSERT INTO `foods` VALUES (42,'chocolate_100_cacao');
+INSERT INTO `foods` VALUES (43,'yuca');
+INSERT INTO `foods` VALUES (44,'cantaloupe');
+INSERT INTO `foods` VALUES (45,'apple');
+INSERT INTO `foods` VALUES (46,'vinegar');
+INSERT INTO `foods` VALUES (47,'pear');
+INSERT INTO `foods` VALUES (48,'coconut_cream');
 CREATE INDEX IF NOT EXISTS `index_food_name` ON `foods` (
 	`food_name`
 );

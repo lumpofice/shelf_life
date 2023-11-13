@@ -5,6 +5,6 @@ CREATE TABLE IF NOT EXISTS `grocers` (
 );
 INSERT INTO `grocers` VALUES (1,'winn_dixie');
 INSERT INTO `grocers` VALUES (2,'publix');
-INSERT INTO `grocers` VALUES (3, 'fresh_market');
+INSERT INTO `grocers` VALUES (3,'fresh_market');
 INSERT INTO `grocers` VALUES (4,'piggly_wiggly');
 COMMIT;
