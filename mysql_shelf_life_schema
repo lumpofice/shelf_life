@@ -129,6 +129,21 @@ INSERT INTO `cities` VALUES (1,'columbus');
 
 
 
+CREATE TABLE `lifts` (
+	`lift_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`lift_name`	TEXT
+);
+
+
+
+
+INSERT INTO `lifts` VALUES (1,'overhead_press');
+INSERT INTO `lifts` VALUES (2,'front_squat');
+INSERT INTO `lifts` VALUES (3,'deadlift');
+
+
+
+
 set foreign_key_checks=0;
 
 
@@ -1592,6 +1607,27 @@ INSERT INTO `purchases` VALUES (1436,13,4.66,2,1,1,1,'2024-06-22');
 INSERT INTO `purchases` VALUES (1437,7,6.25,2,1,1,1,'2024-06-22');
 INSERT INTO `purchases` VALUES (1438,17,5.85,2,1,1,1,'2024-06-22');
 
+
+
+
+CREATE TABLE `trainings` (
+	`training_id`	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`lift_id`	INTEGER NOT NULL,
+	`amount`	REAL,
+	`repetition`	INTEGER NOT NULL,
+	`the_date`	TEXT,
+	FOREIGN KEY(`lift_id`) REFERENCES `lifts`(`lift_id`)
+);
+
+
+
+
+INSERT INTO `trainings` VALUES (1,1,75,5,'2024-07-10');
+INSERT INTO `trainings` VALUES (2,1,75,5,'2024-07-12');
+INSERT INTO `trainings` VALUES (3,2,105,5,'2024-07-13');
+INSERT INTO `trainings` VALUES (4,3,165,5,'2024-07-13');
+INSERT INTO `trainings` VALUES (5,2,105,5,'2024-07-14');
+INSERT INTO `trainings` VALUES (6,3,165,5,'2024-07-14');
 
 
 

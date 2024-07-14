@@ -1,0 +1,16 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS `trainings` (
+	`training_id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`lift_id`	INTEGER NOT NULL,
+	`amount`	REAL,
+	`repetition`	INTEGER NOT NULL,
+	`the_date`	TEXT,
+	FOREIGN KEY(`lift_id`) REFERENCES `lifts`(`lift_id`)
+);
+INSERT INTO `trainings` VALUES (1,1,75,5,'2024-07-10');
+INSERT INTO `trainings` VALUES (2,1,75,5,'2024-07-12');
+INSERT INTO `trainings` VALUES (3,2,105,5,'2024-07-13');
+INSERT INTO `trainings` VALUES (4,3,165,5,'2024-07-13');
+INSERT INTO `trainings` VALUES (5,2,105,5,'2024-07-14');
+INSERT INTO `trainings` VALUES (6,3,165,5,'2024-07-14');
+COMMIT;
