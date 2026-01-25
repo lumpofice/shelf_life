@@ -55,6 +55,7 @@ INSERT INTO `foods` VALUES (49,'gerolsteiner_water_sparkling');
 INSERT INTO `foods` VALUES (50,'cabot_yogurt');
 INSERT INTO `foods` VALUES (51,'mountain_valley_water_sparkling');
 INSERT INTO `foods` VALUES (52,'ginger_root');
+INSERT INTO `foods` VALUES (53,'mandarin');
 CREATE INDEX IF NOT EXISTS `index_food_name` ON `foods` (
 	`food_name`
 );
