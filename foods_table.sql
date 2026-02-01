@@ -58,6 +58,7 @@ INSERT INTO `foods` VALUES (52,'ginger_root');
 INSERT INTO `foods` VALUES (53,'mandarin');
 INSERT INTO `foods` VALUES (54,'lemon');
 INSERT INTO `foods` VALUES (55,'turmeric');
+INSERT INTO `foods` VALUES (56,'coconut_milk');
 CREATE INDEX IF NOT EXISTS `index_food_name` ON `foods` (
 	`food_name`
 );
